@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:routine_checker/core/services/navigation_service.dart';
 import 'package:routine_checker/ui/views/home.dart';
 import 'package:routine_checker/ui/views/next_up.dart';
+import 'package:routine_checker/ui/views/routine/routine_manip_view.dart';
 
 class BaseView extends StatelessWidget {
   const BaseView({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class BaseView extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
-          onPressed: (){},
+          onPressed: () => navigate(context, RoutineManip()),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [

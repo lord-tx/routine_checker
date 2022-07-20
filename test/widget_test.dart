@@ -25,7 +25,7 @@ void main() {
     await tester.pump();
 
     // Verify that our counter has incremented.
-    expect(find.byWidget(const RoutineManip()), findsOneWidget);
+    expect(find.byWidget(RoutineManip()), findsOneWidget);
     expect(find.byWidget(const BaseView()), findsNothing);
   });
 }
