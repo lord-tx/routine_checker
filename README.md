@@ -1,16 +1,9 @@
 # routine_checker
 
-A new Flutter project.
+The Routine Checker Application enables users to add, edit and manipulate routines, ensuring proper 
+notification on routine timing and providing a seamless routine integration approach.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The Design Overview is available at:
+- [Routine Checker Design Overview](https://www.figma.com/file/PljPJifDcEwQ8jnbvRPjql/Routine-Checker?node-id=0%3A1)
