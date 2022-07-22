@@ -62,7 +62,8 @@ class RoutineProvider extends ChangeNotifier{
     if (missed == false){
       routines[index].addRoutinePerformance(RoutinePerformance.done);
       routines[index].markDone();
-      addRoutine(routines[index]);
+      // NOTE: WHAT?
+      // addRoutine(routines[index]);
     } else {
       routines[index].addRoutinePerformance(RoutinePerformance.missed);
     }
