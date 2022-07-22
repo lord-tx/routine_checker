@@ -1,4 +1,6 @@
 import 'package:collection/collection.dart';
+import 'package:cron/cron.dart';
+import 'package:flutter/foundation.dart';
 import 'package:routine_checker/core/enums/routine_performance.dart';
 
 /// The Routine Class houses the variables and functionality of all
@@ -10,20 +12,28 @@ const defaultExpiry = Duration(minutes: 15);
 
 class Routine{
   Routine({
-    required this.id,
     required this.title,
     required this.description,
-    this.done = false
-});
+    required this.schedule,
+    this.frequency,
+    this.done,
+}){
+    id = generateId();
+    if (kDebugMode) {
+      print(id);
+    }
+  }
 
   // Basis Routine Information
   int? id;
   String? title;
   String? description;
-  DateTime? frequency;
-  DateTime? expiration;
+  Schedule? schedule;
+  String? frequency;
+  Duration? expiration = defaultExpiry;
   List<int> routinePerformance = [];
   bool? done;
+  bool? activate;
 
   // Basic Routine Functionality
   // Introduce chaining to reduce initialization complexity
@@ -37,10 +47,6 @@ class Routine{
     return this;
   }
 
-  Routine setExpiration(){
-    expiration = frequency?.add(defaultExpiry);
-    return this;
-  }
 
   // Boolean activation omitted from chaining
   void markDone() => done = true;
@@ -57,5 +63,9 @@ class Routine{
     } catch(e) {
       return 0;
     }
+  }
+
+  int generateId(){
+    return DateTime.now().millisecondsSinceEpoch.toInt();
   }
 }

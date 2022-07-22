@@ -27,16 +27,29 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  intl: ^0.17.0
-  provider: ^6.0.3
-  collection: ^1.16.0
   flutter:
     sdk: flutter
 
 
-  # The following adds the Cupertino Icons font to your application.
+  # This adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  # This adds the cron scheduler to the application
+  # Run tasks periodically at fixed times or intervals.
+  cron: ^0.5.0
+  # This adds Internationalization option to your application.
+  # Locales are available for DateTime etc.
+  intl: ^0.17.0
+  # This is a preferred compact state management solution,
+  # Expose necessary parts to your widget tree and listen.
+  provider: ^6.0.3
+  # Adds dart extended  functionality such as algorithmic manipulations.
+  collection: ^1.16.0
+  # Create Local Notifications.
+  # Notifications could be scheduled repeatedly or not, with seconds precision.
+  flutter_local_notifications: ^9.7.0
+  # Easily customizable countdowns
+  flutter_countdown_timer: ^4.1.0
 
 dev_dependencies:
   flutter_test:
